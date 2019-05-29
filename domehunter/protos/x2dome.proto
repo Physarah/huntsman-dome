@@ -6,27 +6,27 @@ import "google/protobuf/empty.proto";
 
 service X2Dome {
   // Dome API
-  rpc dapiGetAzEl (Empty) returns (AzEl);
+  rpc dapiGetAzEl (google.protobuf.Empty) returns (AzEl);
   rpc dapiGotoAzEl (AzEl) returns (ReturnCode);
-  rpc dapiAbort (Empty) returns (ReturnCode);
-  rpc dapiOpen (Empty) returns (ReturnCode);
-  rpc dapiClose (Empty) returns (ReturnCode);
-  rpc dapiPark (Empty) returns (ReturnCode);
-  rpc dapiUnpark (Empty) returns (ReturnCode);
-  rpc dapiFindHome (Empty) returns (ReturnCode);
-  rpc dapiGotoComplete (Empty) returns (IsComplete);
-  rpc dapiOpenComplete (Empty) returns (IsComplete);
-  rpc dapiCloseComplete (Empty) returns (IsComplete);
-  rpc dapiParkComplete (Empty) returns (IsComplete);
-  rpc dapiUnparkComplete (Empty) returns (IsComplete);
-  rpc dapiFindHomeComplete (Empty) returns (IsComplete);
+  rpc dapiAbort (google.protobuf.Empty) returns (ReturnCode);
+  rpc dapiOpen (google.protobuf.Empty) returns (ReturnCode);
+  rpc dapiClose (google.protobuf.Empty) returns (ReturnCode);
+  rpc dapiPark (google.protobuf.Empty) returns (ReturnCode);
+  rpc dapiUnpark (google.protobuf.Empty) returns (ReturnCode);
+  rpc dapiFindHome (google.protobuf.Empty) returns (ReturnCode);
+  rpc dapiGotoComplete (google.protobuf.Empty) returns (IsComplete);
+  rpc dapiOpenComplete (google.protobuf.Empty) returns (IsComplete);
+  rpc dapiCloseComplete (google.protobuf.Empty) returns (IsComplete);
+  rpc dapiParkComplete (google.protobuf.Empty) returns (IsComplete);
+  rpc dapiUnparkComplete (google.protobuf.Empty) returns (IsComplete);
+  rpc dapiFindHomeComplete (google.protobuf.Empty) returns (IsComplete);
   rpc dapiSync (AzEl) returns (ReturnCode);
   // Hardware Info Interface
-  rpc deviceInfoNameShort (Empty) returns (BasicString);
-  rpc deviceInfoNameLong (Empty) returns (BasicString);
-  rpc deviceInfoDetailedDescription (Empty) returns (BasicString);
-  rpc deviceInfoFirmwareVersion (Empty) returns (BasicString);
-  rpc deviceInfoModel (Empty) returns (BasicString);
+  rpc deviceInfoNameShort (google.protobuf.Empty) returns (BasicString);
+  rpc deviceInfoNameLong (google.protobuf.Empty) returns (BasicString);
+  rpc deviceInfoDetailedDescription (google.protobuf.Empty) returns (BasicString);
+  rpc deviceInfoFirmwareVersion (google.protobuf.Empty) returns (BasicString);
+  rpc deviceInfoModel (google.protobuf.Empty) returns (BasicString);
 }
 
 message ReturnCode {
@@ -38,7 +38,7 @@ message ReturnCode {
 message AzEl {
   // When azimuth-elevation are returned return code will be defined, when being
   // passed as an argument there won't be.
-  singular int32 return_code = 1;
+  int32 return_code = 1;
   double az = 2;
   double el = 3;
 }
