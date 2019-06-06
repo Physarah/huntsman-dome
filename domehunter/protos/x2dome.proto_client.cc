@@ -44,11 +44,12 @@ class X2DomeClient {
 
   // Assembles the client's payload, sends it and presents the response back
   // from the server.
-  std::string dapiGotoAzEl(const std::string& az, el) {
+  ReturnCode dapiGotoAzEl(AzEl& azeltest) {
     // Data we are sending to the server.
-    AzEl request;
-    request.set_az(az);
-    request.set_el(el);
+    // AzEl request;
+    // request.set_return_code(azeltest.return_code());
+    // request.set_az(azeltest.az());
+    // request.set_el(azeltest.el());
 
     // Container for the data we expect from the server.
     ReturnCode reply;
@@ -58,15 +59,18 @@ class X2DomeClient {
     ClientContext context;
 
     // The actual RPC.
-    Status status = stub_->dapiGotoAzEl(&context, request, &reply);
+    Status status = stub_->dapiGotoAzEl(&context, azeltest, &reply);
 
     // Act upon its status.
     if (status.ok()) {
-      return reply.return_code();
+      return reply;
     } else {
       std::cout << status.error_code() << ": " << status.error_message()
                 << std::endl;
-      return "RPC failed";
+      ReturnCode fail;
+      int rcf(666);
+      fail.set_return_code(rcf);
+      return fail;
     }
   }
 
@@ -81,10 +85,15 @@ int main(int argc, char** argv) {
   // (use of InsecureChannelCredentials()).
   X2DomeClient x2dome(grpc::CreateChannel(
       "localhost:50051", grpc::InsecureChannelCredentials()));
-  double az(10);
-  double el(20):
-  int reply = x2dome.dapiGotoAzEl(az, el);
-  std::cout << "X2Dome received: " << reply << std::endl;
+  AzEl azeltest;
+  int rc(0);
+  double a(10);
+  double e(20);
+  azeltest.set_return_code(rc);
+  azeltest.set_return_code(a);
+  azeltest.set_return_code(e);
+  ReturnCode result = x2dome.dapiGotoAzEl(azeltest);
+  std::cout << "X2Dome received: " << static_cast<char>(result.return_code()) << std::endl;
 
   return 0;
 }
