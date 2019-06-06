@@ -8,27 +8,27 @@ package x2dome;
 
 service X2Dome {
   // Dome API
-  rpc dapiGetAzEl (google.protobuf.Empty) returns (AzEl);
-  rpc dapiGotoAzEl (AzEl) returns (ReturnCode);
-  rpc dapiAbort (google.protobuf.Empty) returns (ReturnCode);
-  rpc dapiOpen (google.protobuf.Empty) returns (ReturnCode);
-  rpc dapiClose (google.protobuf.Empty) returns (ReturnCode);
-  rpc dapiPark (google.protobuf.Empty) returns (ReturnCode);
-  rpc dapiUnpark (google.protobuf.Empty) returns (ReturnCode);
-  rpc dapiFindHome (google.protobuf.Empty) returns (ReturnCode);
-  rpc dapiGotoComplete (google.protobuf.Empty) returns (IsComplete);
-  rpc dapiOpenComplete (google.protobuf.Empty) returns (IsComplete);
-  rpc dapiCloseComplete (google.protobuf.Empty) returns (IsComplete);
-  rpc dapiParkComplete (google.protobuf.Empty) returns (IsComplete);
-  rpc dapiUnparkComplete (google.protobuf.Empty) returns (IsComplete);
-  rpc dapiFindHomeComplete (google.protobuf.Empty) returns (IsComplete);
-  rpc dapiSync (AzEl) returns (ReturnCode);
+  rpc dapiGetAzEl (google.protobuf.Empty) returns (AzEl) {};
+  rpc dapiGotoAzEl (AzEl) returns (ReturnCode) {};
+  rpc dapiAbort (google.protobuf.Empty) returns (ReturnCode) {};
+  rpc dapiOpen (google.protobuf.Empty) returns (ReturnCode) {};
+  rpc dapiClose (google.protobuf.Empty) returns (ReturnCode) {};
+  rpc dapiPark (google.protobuf.Empty) returns (ReturnCode) {};
+  rpc dapiUnpark (google.protobuf.Empty) returns (ReturnCode) {};
+  rpc dapiFindHome (google.protobuf.Empty) returns (ReturnCode) {};
+  rpc dapiGotoComplete (google.protobuf.Empty) returns (IsComplete) {};
+  rpc dapiOpenComplete (google.protobuf.Empty) returns (IsComplete) {};
+  rpc dapiCloseComplete (google.protobuf.Empty) returns (IsComplete) {};
+  rpc dapiParkComplete (google.protobuf.Empty) returns (IsComplete) {};
+  rpc dapiUnparkComplete (google.protobuf.Empty) returns (IsComplete) {};
+  rpc dapiFindHomeComplete (google.protobuf.Empty) returns (IsComplete) {};
+  rpc dapiSync (AzEl) returns (ReturnCode) {};
   // Hardware Info Interface
-  rpc deviceInfoNameShort (google.protobuf.Empty) returns (BasicString);
-  rpc deviceInfoNameLong (google.protobuf.Empty) returns (BasicString);
-  rpc deviceInfoDetailedDescription (google.protobuf.Empty) returns (BasicString);
-  rpc deviceInfoFirmwareVersion (google.protobuf.Empty) returns (BasicString);
-  rpc deviceInfoModel (google.protobuf.Empty) returns (BasicString);
+  rpc deviceInfoNameShort (google.protobuf.Empty) returns (BasicString) {};
+  rpc deviceInfoNameLong (google.protobuf.Empty) returns (BasicString) {};
+  rpc deviceInfoDetailedDescription (google.protobuf.Empty) returns (BasicString) {};
+  rpc deviceInfoFirmwareVersion (google.protobuf.Empty) returns (BasicString) {};
+  rpc deviceInfoModel (google.protobuf.Empty) returns (BasicString) {};
 }
 
 message ReturnCode {

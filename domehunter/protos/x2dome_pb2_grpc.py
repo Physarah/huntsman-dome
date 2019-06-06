@@ -16,102 +16,102 @@ class X2DomeStub(object):
       channel: A grpc.Channel.
     """
     self.dapiGetAzEl = channel.unary_unary(
-        '/X2Dome/dapiGetAzEl',
+        '/x2dome.X2Dome/dapiGetAzEl',
         request_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
         response_deserializer=x2dome__pb2.AzEl.FromString,
         )
     self.dapiGotoAzEl = channel.unary_unary(
-        '/X2Dome/dapiGotoAzEl',
+        '/x2dome.X2Dome/dapiGotoAzEl',
         request_serializer=x2dome__pb2.AzEl.SerializeToString,
         response_deserializer=x2dome__pb2.ReturnCode.FromString,
         )
     self.dapiAbort = channel.unary_unary(
-        '/X2Dome/dapiAbort',
+        '/x2dome.X2Dome/dapiAbort',
         request_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
         response_deserializer=x2dome__pb2.ReturnCode.FromString,
         )
     self.dapiOpen = channel.unary_unary(
-        '/X2Dome/dapiOpen',
+        '/x2dome.X2Dome/dapiOpen',
         request_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
         response_deserializer=x2dome__pb2.ReturnCode.FromString,
         )
     self.dapiClose = channel.unary_unary(
-        '/X2Dome/dapiClose',
+        '/x2dome.X2Dome/dapiClose',
         request_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
         response_deserializer=x2dome__pb2.ReturnCode.FromString,
         )
     self.dapiPark = channel.unary_unary(
-        '/X2Dome/dapiPark',
+        '/x2dome.X2Dome/dapiPark',
         request_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
         response_deserializer=x2dome__pb2.ReturnCode.FromString,
         )
     self.dapiUnpark = channel.unary_unary(
-        '/X2Dome/dapiUnpark',
+        '/x2dome.X2Dome/dapiUnpark',
         request_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
         response_deserializer=x2dome__pb2.ReturnCode.FromString,
         )
     self.dapiFindHome = channel.unary_unary(
-        '/X2Dome/dapiFindHome',
+        '/x2dome.X2Dome/dapiFindHome',
         request_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
         response_deserializer=x2dome__pb2.ReturnCode.FromString,
         )
     self.dapiGotoComplete = channel.unary_unary(
-        '/X2Dome/dapiGotoComplete',
+        '/x2dome.X2Dome/dapiGotoComplete',
         request_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
         response_deserializer=x2dome__pb2.IsComplete.FromString,
         )
     self.dapiOpenComplete = channel.unary_unary(
-        '/X2Dome/dapiOpenComplete',
+        '/x2dome.X2Dome/dapiOpenComplete',
         request_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
         response_deserializer=x2dome__pb2.IsComplete.FromString,
         )
     self.dapiCloseComplete = channel.unary_unary(
-        '/X2Dome/dapiCloseComplete',
+        '/x2dome.X2Dome/dapiCloseComplete',
         request_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
         response_deserializer=x2dome__pb2.IsComplete.FromString,
         )
     self.dapiParkComplete = channel.unary_unary(
-        '/X2Dome/dapiParkComplete',
+        '/x2dome.X2Dome/dapiParkComplete',
         request_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
         response_deserializer=x2dome__pb2.IsComplete.FromString,
         )
     self.dapiUnparkComplete = channel.unary_unary(
-        '/X2Dome/dapiUnparkComplete',
+        '/x2dome.X2Dome/dapiUnparkComplete',
         request_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
         response_deserializer=x2dome__pb2.IsComplete.FromString,
         )
     self.dapiFindHomeComplete = channel.unary_unary(
-        '/X2Dome/dapiFindHomeComplete',
+        '/x2dome.X2Dome/dapiFindHomeComplete',
         request_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
         response_deserializer=x2dome__pb2.IsComplete.FromString,
         )
     self.dapiSync = channel.unary_unary(
-        '/X2Dome/dapiSync',
+        '/x2dome.X2Dome/dapiSync',
         request_serializer=x2dome__pb2.AzEl.SerializeToString,
         response_deserializer=x2dome__pb2.ReturnCode.FromString,
         )
     self.deviceInfoNameShort = channel.unary_unary(
-        '/X2Dome/deviceInfoNameShort',
+        '/x2dome.X2Dome/deviceInfoNameShort',
         request_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
         response_deserializer=x2dome__pb2.BasicString.FromString,
         )
     self.deviceInfoNameLong = channel.unary_unary(
-        '/X2Dome/deviceInfoNameLong',
+        '/x2dome.X2Dome/deviceInfoNameLong',
         request_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
         response_deserializer=x2dome__pb2.BasicString.FromString,
         )
     self.deviceInfoDetailedDescription = channel.unary_unary(
-        '/X2Dome/deviceInfoDetailedDescription',
+        '/x2dome.X2Dome/deviceInfoDetailedDescription',
         request_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
         response_deserializer=x2dome__pb2.BasicString.FromString,
         )
     self.deviceInfoFirmwareVersion = channel.unary_unary(
-        '/X2Dome/deviceInfoFirmwareVersion',
+        '/x2dome.X2Dome/deviceInfoFirmwareVersion',
         request_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
         response_deserializer=x2dome__pb2.BasicString.FromString,
         )
     self.deviceInfoModel = channel.unary_unary(
-        '/X2Dome/deviceInfoModel',
+        '/x2dome.X2Dome/deviceInfoModel',
         request_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
         response_deserializer=x2dome__pb2.BasicString.FromString,
         )
@@ -366,5 +366,5 @@ def add_X2DomeServicer_to_server(servicer, server):
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
-      'X2Dome', rpc_method_handlers)
+      'x2dome.X2Dome', rpc_method_handlers)
   server.add_generic_rpc_handlers((generic_handler,))

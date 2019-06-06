@@ -18,10 +18,10 @@ from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='x2dome.proto',
-  package='',
+  package='x2dome',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\x0cx2dome.proto\x1a\x1bgoogle/protobuf/empty.proto\"!\n\nReturnCode\x12\x13\n\x0breturn_code\x18\x01 \x01(\x05\"3\n\x04\x41zEl\x12\x13\n\x0breturn_code\x18\x01 \x01(\x05\x12\n\n\x02\x61z\x18\x02 \x01(\x01\x12\n\n\x02\x65l\x18\x03 \x01(\x01\"6\n\nIsComplete\x12\x13\n\x0breturn_code\x18\x01 \x01(\x05\x12\x13\n\x0bis_complete\x18\x02 \x01(\x08\"#\n\x0b\x42\x61sicString\x12\x14\n\x0c\x62\x61sic_string\x18\x01 \x01(\t2\xc1\x08\n\x06X2Dome\x12,\n\x0b\x64\x61piGetAzEl\x12\x16.google.protobuf.Empty\x1a\x05.AzEl\x12\"\n\x0c\x64\x61piGotoAzEl\x12\x05.AzEl\x1a\x0b.ReturnCode\x12\x30\n\tdapiAbort\x12\x16.google.protobuf.Empty\x1a\x0b.ReturnCode\x12/\n\x08\x64\x61piOpen\x12\x16.google.protobuf.Empty\x1a\x0b.ReturnCode\x12\x30\n\tdapiClose\x12\x16.google.protobuf.Empty\x1a\x0b.ReturnCode\x12/\n\x08\x64\x61piPark\x12\x16.google.protobuf.Empty\x1a\x0b.ReturnCode\x12\x31\n\ndapiUnpark\x12\x16.google.protobuf.Empty\x1a\x0b.ReturnCode\x12\x33\n\x0c\x64\x61piFindHome\x12\x16.google.protobuf.Empty\x1a\x0b.ReturnCode\x12\x37\n\x10\x64\x61piGotoComplete\x12\x16.google.protobuf.Empty\x1a\x0b.IsComplete\x12\x37\n\x10\x64\x61piOpenComplete\x12\x16.google.protobuf.Empty\x1a\x0b.IsComplete\x12\x38\n\x11\x64\x61piCloseComplete\x12\x16.google.protobuf.Empty\x1a\x0b.IsComplete\x12\x37\n\x10\x64\x61piParkComplete\x12\x16.google.protobuf.Empty\x1a\x0b.IsComplete\x12\x39\n\x12\x64\x61piUnparkComplete\x12\x16.google.protobuf.Empty\x1a\x0b.IsComplete\x12;\n\x14\x64\x61piFindHomeComplete\x12\x16.google.protobuf.Empty\x1a\x0b.IsComplete\x12\x1e\n\x08\x64\x61piSync\x12\x05.AzEl\x1a\x0b.ReturnCode\x12;\n\x13\x64\x65viceInfoNameShort\x12\x16.google.protobuf.Empty\x1a\x0c.BasicString\x12:\n\x12\x64\x65viceInfoNameLong\x12\x16.google.protobuf.Empty\x1a\x0c.BasicString\x12\x45\n\x1d\x64\x65viceInfoDetailedDescription\x12\x16.google.protobuf.Empty\x1a\x0c.BasicString\x12\x41\n\x19\x64\x65viceInfoFirmwareVersion\x12\x16.google.protobuf.Empty\x1a\x0c.BasicString\x12\x37\n\x0f\x64\x65viceInfoModel\x12\x16.google.protobuf.Empty\x1a\x0c.BasicStringb\x06proto3')
+  serialized_pb=_b('\n\x0cx2dome.proto\x12\x06x2dome\x1a\x1bgoogle/protobuf/empty.proto\"!\n\nReturnCode\x12\x13\n\x0breturn_code\x18\x01 \x01(\x05\"3\n\x04\x41zEl\x12\x13\n\x0breturn_code\x18\x01 \x01(\x05\x12\n\n\x02\x61z\x18\x02 \x01(\x01\x12\n\n\x02\x65l\x18\x03 \x01(\x01\"6\n\nIsComplete\x12\x13\n\x0breturn_code\x18\x01 \x01(\x05\x12\x13\n\x0bis_complete\x18\x02 \x01(\x08\"#\n\x0b\x42\x61sicString\x12\x14\n\x0c\x62\x61sic_string\x18\x01 \x01(\t2\x83\n\n\x06X2Dome\x12\x35\n\x0b\x64\x61piGetAzEl\x12\x16.google.protobuf.Empty\x1a\x0c.x2dome.AzEl\"\x00\x12\x32\n\x0c\x64\x61piGotoAzEl\x12\x0c.x2dome.AzEl\x1a\x12.x2dome.ReturnCode\"\x00\x12\x39\n\tdapiAbort\x12\x16.google.protobuf.Empty\x1a\x12.x2dome.ReturnCode\"\x00\x12\x38\n\x08\x64\x61piOpen\x12\x16.google.protobuf.Empty\x1a\x12.x2dome.ReturnCode\"\x00\x12\x39\n\tdapiClose\x12\x16.google.protobuf.Empty\x1a\x12.x2dome.ReturnCode\"\x00\x12\x38\n\x08\x64\x61piPark\x12\x16.google.protobuf.Empty\x1a\x12.x2dome.ReturnCode\"\x00\x12:\n\ndapiUnpark\x12\x16.google.protobuf.Empty\x1a\x12.x2dome.ReturnCode\"\x00\x12<\n\x0c\x64\x61piFindHome\x12\x16.google.protobuf.Empty\x1a\x12.x2dome.ReturnCode\"\x00\x12@\n\x10\x64\x61piGotoComplete\x12\x16.google.protobuf.Empty\x1a\x12.x2dome.IsComplete\"\x00\x12@\n\x10\x64\x61piOpenComplete\x12\x16.google.protobuf.Empty\x1a\x12.x2dome.IsComplete\"\x00\x12\x41\n\x11\x64\x61piCloseComplete\x12\x16.google.protobuf.Empty\x1a\x12.x2dome.IsComplete\"\x00\x12@\n\x10\x64\x61piParkComplete\x12\x16.google.protobuf.Empty\x1a\x12.x2dome.IsComplete\"\x00\x12\x42\n\x12\x64\x61piUnparkComplete\x12\x16.google.protobuf.Empty\x1a\x12.x2dome.IsComplete\"\x00\x12\x44\n\x14\x64\x61piFindHomeComplete\x12\x16.google.protobuf.Empty\x1a\x12.x2dome.IsComplete\"\x00\x12.\n\x08\x64\x61piSync\x12\x0c.x2dome.AzEl\x1a\x12.x2dome.ReturnCode\"\x00\x12\x44\n\x13\x64\x65viceInfoNameShort\x12\x16.google.protobuf.Empty\x1a\x13.x2dome.BasicString\"\x00\x12\x43\n\x12\x64\x65viceInfoNameLong\x12\x16.google.protobuf.Empty\x1a\x13.x2dome.BasicString\"\x00\x12N\n\x1d\x64\x65viceInfoDetailedDescription\x12\x16.google.protobuf.Empty\x1a\x13.x2dome.BasicString\"\x00\x12J\n\x19\x64\x65viceInfoFirmwareVersion\x12\x16.google.protobuf.Empty\x1a\x13.x2dome.BasicString\"\x00\x12@\n\x0f\x64\x65viceInfoModel\x12\x16.google.protobuf.Empty\x1a\x13.x2dome.BasicString\"\x00\x62\x06proto3')
   ,
   dependencies=[google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,])
 
@@ -30,13 +30,13 @@ DESCRIPTOR = _descriptor.FileDescriptor(
 
 _RETURNCODE = _descriptor.Descriptor(
   name='ReturnCode',
-  full_name='ReturnCode',
+  full_name='x2dome.ReturnCode',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='return_code', full_name='ReturnCode.return_code', index=0,
+      name='return_code', full_name='x2dome.ReturnCode.return_code', index=0,
       number=1, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -54,34 +54,34 @@ _RETURNCODE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=45,
-  serialized_end=78,
+  serialized_start=53,
+  serialized_end=86,
 )
 
 
 _AZEL = _descriptor.Descriptor(
   name='AzEl',
-  full_name='AzEl',
+  full_name='x2dome.AzEl',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='return_code', full_name='AzEl.return_code', index=0,
+      name='return_code', full_name='x2dome.AzEl.return_code', index=0,
       number=1, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='az', full_name='AzEl.az', index=1,
+      name='az', full_name='x2dome.AzEl.az', index=1,
       number=2, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='el', full_name='AzEl.el', index=2,
+      name='el', full_name='x2dome.AzEl.el', index=2,
       number=3, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
@@ -99,27 +99,27 @@ _AZEL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=80,
-  serialized_end=131,
+  serialized_start=88,
+  serialized_end=139,
 )
 
 
 _ISCOMPLETE = _descriptor.Descriptor(
   name='IsComplete',
-  full_name='IsComplete',
+  full_name='x2dome.IsComplete',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='return_code', full_name='IsComplete.return_code', index=0,
+      name='return_code', full_name='x2dome.IsComplete.return_code', index=0,
       number=1, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='is_complete', full_name='IsComplete.is_complete', index=1,
+      name='is_complete', full_name='x2dome.IsComplete.is_complete', index=1,
       number=2, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
@@ -137,20 +137,20 @@ _ISCOMPLETE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=133,
-  serialized_end=187,
+  serialized_start=141,
+  serialized_end=195,
 )
 
 
 _BASICSTRING = _descriptor.Descriptor(
   name='BasicString',
-  full_name='BasicString',
+  full_name='x2dome.BasicString',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='basic_string', full_name='BasicString.basic_string', index=0,
+      name='basic_string', full_name='x2dome.BasicString.basic_string', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -168,8 +168,8 @@ _BASICSTRING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=189,
-  serialized_end=224,
+  serialized_start=197,
+  serialized_end=232,
 )
 
 DESCRIPTOR.message_types_by_name['ReturnCode'] = _RETURNCODE
@@ -181,28 +181,28 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 ReturnCode = _reflection.GeneratedProtocolMessageType('ReturnCode', (_message.Message,), dict(
   DESCRIPTOR = _RETURNCODE,
   __module__ = 'x2dome_pb2'
-  # @@protoc_insertion_point(class_scope:ReturnCode)
+  # @@protoc_insertion_point(class_scope:x2dome.ReturnCode)
   ))
 _sym_db.RegisterMessage(ReturnCode)
 
 AzEl = _reflection.GeneratedProtocolMessageType('AzEl', (_message.Message,), dict(
   DESCRIPTOR = _AZEL,
   __module__ = 'x2dome_pb2'
-  # @@protoc_insertion_point(class_scope:AzEl)
+  # @@protoc_insertion_point(class_scope:x2dome.AzEl)
   ))
 _sym_db.RegisterMessage(AzEl)
 
 IsComplete = _reflection.GeneratedProtocolMessageType('IsComplete', (_message.Message,), dict(
   DESCRIPTOR = _ISCOMPLETE,
   __module__ = 'x2dome_pb2'
-  # @@protoc_insertion_point(class_scope:IsComplete)
+  # @@protoc_insertion_point(class_scope:x2dome.IsComplete)
   ))
 _sym_db.RegisterMessage(IsComplete)
 
 BasicString = _reflection.GeneratedProtocolMessageType('BasicString', (_message.Message,), dict(
   DESCRIPTOR = _BASICSTRING,
   __module__ = 'x2dome_pb2'
-  # @@protoc_insertion_point(class_scope:BasicString)
+  # @@protoc_insertion_point(class_scope:x2dome.BasicString)
   ))
 _sym_db.RegisterMessage(BasicString)
 
@@ -210,16 +210,16 @@ _sym_db.RegisterMessage(BasicString)
 
 _X2DOME = _descriptor.ServiceDescriptor(
   name='X2Dome',
-  full_name='X2Dome',
+  full_name='x2dome.X2Dome',
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=227,
-  serialized_end=1316,
+  serialized_start=235,
+  serialized_end=1518,
   methods=[
   _descriptor.MethodDescriptor(
     name='dapiGetAzEl',
-    full_name='X2Dome.dapiGetAzEl',
+    full_name='x2dome.X2Dome.dapiGetAzEl',
     index=0,
     containing_service=None,
     input_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
@@ -228,7 +228,7 @@ _X2DOME = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='dapiGotoAzEl',
-    full_name='X2Dome.dapiGotoAzEl',
+    full_name='x2dome.X2Dome.dapiGotoAzEl',
     index=1,
     containing_service=None,
     input_type=_AZEL,
@@ -237,7 +237,7 @@ _X2DOME = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='dapiAbort',
-    full_name='X2Dome.dapiAbort',
+    full_name='x2dome.X2Dome.dapiAbort',
     index=2,
     containing_service=None,
     input_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
@@ -246,7 +246,7 @@ _X2DOME = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='dapiOpen',
-    full_name='X2Dome.dapiOpen',
+    full_name='x2dome.X2Dome.dapiOpen',
     index=3,
     containing_service=None,
     input_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
@@ -255,7 +255,7 @@ _X2DOME = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='dapiClose',
-    full_name='X2Dome.dapiClose',
+    full_name='x2dome.X2Dome.dapiClose',
     index=4,
     containing_service=None,
     input_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
@@ -264,7 +264,7 @@ _X2DOME = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='dapiPark',
-    full_name='X2Dome.dapiPark',
+    full_name='x2dome.X2Dome.dapiPark',
     index=5,
     containing_service=None,
     input_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
@@ -273,7 +273,7 @@ _X2DOME = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='dapiUnpark',
-    full_name='X2Dome.dapiUnpark',
+    full_name='x2dome.X2Dome.dapiUnpark',
     index=6,
     containing_service=None,
     input_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
@@ -282,7 +282,7 @@ _X2DOME = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='dapiFindHome',
-    full_name='X2Dome.dapiFindHome',
+    full_name='x2dome.X2Dome.dapiFindHome',
     index=7,
     containing_service=None,
     input_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
@@ -291,7 +291,7 @@ _X2DOME = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='dapiGotoComplete',
-    full_name='X2Dome.dapiGotoComplete',
+    full_name='x2dome.X2Dome.dapiGotoComplete',
     index=8,
     containing_service=None,
     input_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
@@ -300,7 +300,7 @@ _X2DOME = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='dapiOpenComplete',
-    full_name='X2Dome.dapiOpenComplete',
+    full_name='x2dome.X2Dome.dapiOpenComplete',
     index=9,
     containing_service=None,
     input_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
@@ -309,7 +309,7 @@ _X2DOME = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='dapiCloseComplete',
-    full_name='X2Dome.dapiCloseComplete',
+    full_name='x2dome.X2Dome.dapiCloseComplete',
     index=10,
     containing_service=None,
     input_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
@@ -318,7 +318,7 @@ _X2DOME = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='dapiParkComplete',
-    full_name='X2Dome.dapiParkComplete',
+    full_name='x2dome.X2Dome.dapiParkComplete',
     index=11,
     containing_service=None,
     input_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
@@ -327,7 +327,7 @@ _X2DOME = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='dapiUnparkComplete',
-    full_name='X2Dome.dapiUnparkComplete',
+    full_name='x2dome.X2Dome.dapiUnparkComplete',
     index=12,
     containing_service=None,
     input_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
@@ -336,7 +336,7 @@ _X2DOME = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='dapiFindHomeComplete',
-    full_name='X2Dome.dapiFindHomeComplete',
+    full_name='x2dome.X2Dome.dapiFindHomeComplete',
     index=13,
     containing_service=None,
     input_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
@@ -345,7 +345,7 @@ _X2DOME = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='dapiSync',
-    full_name='X2Dome.dapiSync',
+    full_name='x2dome.X2Dome.dapiSync',
     index=14,
     containing_service=None,
     input_type=_AZEL,
@@ -354,7 +354,7 @@ _X2DOME = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='deviceInfoNameShort',
-    full_name='X2Dome.deviceInfoNameShort',
+    full_name='x2dome.X2Dome.deviceInfoNameShort',
     index=15,
     containing_service=None,
     input_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
@@ -363,7 +363,7 @@ _X2DOME = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='deviceInfoNameLong',
-    full_name='X2Dome.deviceInfoNameLong',
+    full_name='x2dome.X2Dome.deviceInfoNameLong',
     index=16,
     containing_service=None,
     input_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
@@ -372,7 +372,7 @@ _X2DOME = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='deviceInfoDetailedDescription',
-    full_name='X2Dome.deviceInfoDetailedDescription',
+    full_name='x2dome.X2Dome.deviceInfoDetailedDescription',
     index=17,
     containing_service=None,
     input_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
@@ -381,7 +381,7 @@ _X2DOME = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='deviceInfoFirmwareVersion',
-    full_name='X2Dome.deviceInfoFirmwareVersion',
+    full_name='x2dome.X2Dome.deviceInfoFirmwareVersion',
     index=18,
     containing_service=None,
     input_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
@@ -390,7 +390,7 @@ _X2DOME = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='deviceInfoModel',
-    full_name='X2Dome.deviceInfoModel',
+    full_name='x2dome.X2Dome.deviceInfoModel',
     index=19,
     containing_service=None,
     input_type=google_dot_protobuf_dot_empty__pb2._EMPTY,

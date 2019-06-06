@@ -44,12 +44,13 @@ class X2DomeClient {
 
   // Assembles the client's payload, sends it and presents the response back
   // from the server.
-  ReturnCode dapiGotoAzEl(AzEl& azeltest) {
+  int dapiGotoAzEl(int rc, double az, double el) {
     // Data we are sending to the server.
-    // AzEl request;
-    // request.set_return_code(azeltest.return_code());
-    // request.set_az(azeltest.az());
-    // request.set_el(azeltest.el());
+    AzEl request;
+    request.set_return_code(rc);
+    request.set_az(az);
+    request.set_el(el);
+    std::cout << request.return_code() << std::endl;
 
     // Container for the data we expect from the server.
     ReturnCode reply;
@@ -59,17 +60,17 @@ class X2DomeClient {
     ClientContext context;
 
     // The actual RPC.
-    Status status = stub_->dapiGotoAzEl(&context, azeltest, &reply);
+    Status status = stub_->dapiGotoAzEl(&context, request, &reply);
+
+    std::cout << status.ok() << std::endl;
 
     // Act upon its status.
     if (status.ok()) {
-      return reply;
+      return reply.return_code();
     } else {
       std::cout << status.error_code() << ": " << status.error_message()
                 << std::endl;
-      ReturnCode fail;
-      int rcf(666);
-      fail.set_return_code(rcf);
+      int fail(666);
       return fail;
     }
   }
@@ -85,15 +86,14 @@ int main(int argc, char** argv) {
   // (use of InsecureChannelCredentials()).
   X2DomeClient x2dome(grpc::CreateChannel(
       "localhost:50051", grpc::InsecureChannelCredentials()));
-  AzEl azeltest;
-  int rc(0);
+  int rc(1);
   double a(10);
   double e(20);
-  azeltest.set_return_code(rc);
-  azeltest.set_return_code(a);
-  azeltest.set_return_code(e);
-  ReturnCode result = x2dome.dapiGotoAzEl(azeltest);
-  std::cout << "X2Dome received: " << static_cast<char>(result.return_code()) << std::endl;
+  int result;
+  result = x2dome.dapiGotoAzEl(rc, a, e);
+  // int output(dynamic_cast<char>(result.return_code()));
+  std::string test("Y E E T");
+  std::cout << "X2Dome received: " << result << std::endl;
 
   return 0;
 }
