@@ -1,0 +1,1 @@
+python -m grpc_tools.protoc -I=$HOME/Documents/REPOS/huntsman-dome/domehunter/protos --python_out=. --grpc_python_out=. --proto_path=/usr/local/include/google/protobuf $HOME/Documents/REPOS/huntsman-dome/domehunter/protos/x2dome.proto
