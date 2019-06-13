@@ -3,7 +3,7 @@
 ######################################################################
 
 TEMPLATE = lib
-TARGET = HuntsmanDome
+TARGET = x2dome
 DEPENDPATH += .
 INCLUDEPATH += .
 
@@ -14,11 +14,8 @@ macx:		DEFINES += SB_MAC_BUILD
 linux-g++:	DEFINES += SB_LINUX_BUILD
 
 # Input
-HEADERS += src/main.h \
-           src/x2dome.h \
-           src/x2dome.grpc.pb.h \
-           src/x2dome.pb.h \
-           src/licensedinterfaces/basicstringinterface.h \
-           src/licensedinterfaces/sberrorx.h
-SOURCES += src/main.cpp src/x2dome.cpp src/x2dome.grpc.pb.cc src/x2dome.pb.cc
-
+HEADERS += main.h \
+           x2dome.h \
+           ../../licensedinterfaces/basicstringinterface.h \
+           ../../licensedinterfaces/sberrorx.h
+SOURCES += main.cpp x2dome.cpp

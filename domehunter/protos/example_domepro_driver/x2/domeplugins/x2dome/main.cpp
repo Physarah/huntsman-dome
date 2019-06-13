@@ -1,10 +1,10 @@
 #include <stdio.h>
-#include "licensedinterfaces/basicstringinterface.h"
+#include "../../licensedinterfaces/basicstringinterface.h"
 #include "main.h"
 #include "x2dome.h"
 
 
-#define PLUGIN_NAME "X2Dome example"
+#define PLUGIN_NAME "X2Dome example" 
 
 extern "C" PlugInExport int sbPlugInName2(BasicStringInterface& str)
 {
@@ -13,10 +13,10 @@ extern "C" PlugInExport int sbPlugInName2(BasicStringInterface& str)
 	return 0;
 }
 
-extern "C" PlugInExport int sbPlugInFactory2(	const char* pszSelection,
+extern "C" PlugInExport int sbPlugInFactory2(	const char* pszSelection, 
 												const int& nInstanceIndex,
-												SerXInterface					* pSerXIn,
-												TheSkyXFacadeForDriversInterface* pTheSkyXIn,
+												SerXInterface					* pSerXIn, 
+												TheSkyXFacadeForDriversInterface* pTheSkyXIn, 
 												SleeperInterface		* pSleeperIn,
 												BasicIniUtilInterface  * pIniUtilIn,
 												LoggerInterface			* pLoggerIn,
@@ -28,10 +28,10 @@ extern "C" PlugInExport int sbPlugInFactory2(	const char* pszSelection,
 	X2Dome* gpMyImpl=NULL;
 
 	if (NULL == gpMyImpl)
-		gpMyImpl = new X2Dome(	pszSelection,
+		gpMyImpl = new X2Dome(	pszSelection, 
 									nInstanceIndex,
-									pSerXIn,
-									pTheSkyXIn,
+									pSerXIn, 
+									pTheSkyXIn, 
 									pSleeperIn,
 									pIniUtilIn,
 									pLoggerIn,
@@ -42,3 +42,4 @@ extern "C" PlugInExport int sbPlugInFactory2(	const char* pszSelection,
 
 	return 0;
 }
+

@@ -7,10 +7,10 @@
 #include "imagingsystem/hardware/interfaces/licensed/deviceinfointerface.h"
 #include "imagingsystem/hardware/interfaces/licensed/driverinfointerface.h"
 #else
-#include "licensedinterfaces/driverrootinterface.h"
-#include "licensedinterfaces/linkinterface.h"
-#include "licensedinterfaces/deviceinfointerface.h"
-#include "licensedinterfaces/driverinfointerface.h"
+#include "driverrootinterface.h"
+#include "linkinterface.h"
+#include "deviceinfointerface.h"
+#include "driverinfointerface.h"
 #endif
 
 
