@@ -12,29 +12,27 @@ else
 	PROTO_PATH2="/home/fergus/Documents/REPOS/huntsman-dome/domehunter/protos/src/x2dome.proto"
 	GRPC_CPP_PLUGIN_PATH="$(which grpc_cpp_plugin)"
 
-	echo "Generating GRPC C++ code"
+	echo -e "Generating GRPC C++ code\n"
 
-	echo "protoc -I $PROTOS_PATH --cpp_out=. src/x2dome.proto"
+	echo -e "protoc -I $PROTOS_PATH --cpp_out=. src/x2dome.proto\n"
 	protoc -I "$PROTOS_PATH" --cpp_out=. x2dome.proto
-	echo ""
 
-	echo "protoc -I $PROTOS_PATH --grpc_out=. --proto_path=$PROTO_PATH1 $PROTO_PATH2 --plugin=protoc-gen-grpc=$GRPC_CPP_PLUGIN_PATH"
+	echo -e "protoc -I $PROTOS_PATH --grpc_out=. --proto_path=$PROTO_PATH1 $PROTO_PATH2 --plugin=protoc-gen-grpc=$GRPC_CPP_PLUGIN_PATH\n"
 	protoc -I "$PROTOS_PATH" --grpc_out=. --proto_path="$PROTO_PATH1" "$PROTO_PATH2" --plugin=protoc-gen-grpc="$GRPC_CPP_PLUGIN_PATH"
-	echo ""
 
-	echo "Moving generated GRPC C++ code to src/"
+	echo -e "Moving generated GRPC C++ code to src/\n"
 	mv *pb* src/
 
-	echo "Generating Makefile from project file."
+	echo -e "Generating Makefile from project file.\n"
 	qmake
 	echo ""
 
-	echo "Running Generated Makefile."
+	echo -e "Running Generated Makefile.\n"
 	make
 	echo ""
 
-	echo "Cleaning out object files."
+	echo -e "Cleaning out object files.\n"
 	rm *.o
 
-	echo "Done."
+	echo -e "Done.\n"
 fi
