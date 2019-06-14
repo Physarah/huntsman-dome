@@ -4,9 +4,9 @@ syntax = "proto3";
 
 import "google/protobuf/empty.proto";
 
-package x2dome;
+package hx2dome;
 
-service X2Dome {
+service HX2Dome {
   // Dome API
   rpc dapiGetAzEl (google.protobuf.Empty) returns (AzEl) {};
   rpc dapiGotoAzEl (AzEl) returns (ReturnCode) {};

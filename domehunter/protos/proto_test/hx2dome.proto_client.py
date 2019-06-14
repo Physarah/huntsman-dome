@@ -18,8 +18,8 @@ import logging
 
 import grpc
 
-import x2dome_pb2
-import x2dome_pb2_grpc
+import hx2dome_pb2
+import hx2dome_pb2_grpc
 
 # Just using this as a way to test the python server without having to use/debug the c++ client
 def run():
@@ -27,10 +27,10 @@ def run():
     # used in circumstances in which the with statement does not fit the needs
     # of the code.
     with grpc.insecure_channel('localhost:50051') as channel:
-        stub = x2dome_pb2_grpc.X2DomeStub(channel)
-        response = stub.dapiGotoAzEl(x2dome_pb2.AzEl(return_code=1, az=10, el=20))
+        stub = hx2dome_pb2_grpc.HX2DomeStub(channel)
+        response = stub.dapiGotoAzEl(hx2dome_pb2.AzEl(return_code=1, az=10, el=20))
     print(type(response))
-    print(f"X2Dome client received: return_code={response.return_code}")
+    print(f"HX2Dome client received: return_code={response.return_code}")
 
 
 if __name__ == '__main__':

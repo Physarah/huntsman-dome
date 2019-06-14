@@ -15,7 +15,7 @@ else
 	echo -e "Generating GRPC C++ code\n"
 
 	echo -e "protoc -I $PROTOS_PATH --cpp_out=. src/x2dome.proto\n"
-	protoc -I "$PROTOS_PATH" --cpp_out=. x2dome.proto
+	protoc -I "$PROTOS_PATH" --cpp_out=. src/hx2dome.proto
 
 	echo -e "protoc -I $PROTOS_PATH --grpc_out=. --proto_path=$PROTO_PATH1 $PROTO_PATH2 --plugin=protoc-gen-grpc=$GRPC_CPP_PLUGIN_PATH\n"
 	protoc -I "$PROTOS_PATH" --grpc_out=. --proto_path="$PROTO_PATH1" "$PROTO_PATH2" --plugin=protoc-gen-grpc="$GRPC_CPP_PLUGIN_PATH"
@@ -25,11 +25,9 @@ else
 
 	echo -e "Generating Makefile from project file.\n"
 	qmake
-	echo ""
 
 	echo -e "Running Generated Makefile.\n"
 	make
-	echo ""
 
 	echo -e "Cleaning out object files.\n"
 	rm *.o

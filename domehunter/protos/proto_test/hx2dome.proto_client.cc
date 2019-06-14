@@ -23,24 +23,24 @@
 #include <grpcpp/grpcpp.h>
 
 #ifdef BAZEL_BUILD
-#include "/home/fergus/Documents/REPOS/huntsman-dome/domehunter/protos/x2dome.grpc.pb.h"
+#include "/home/fergus/Documents/REPOS/huntsman-dome/domehunter/protos/proto_test/hx2dome.grpc.pb.h"
 #else
-#include "x2dome.grpc.pb.h"
+#include "hx2dome.grpc.pb.h"
 #endif
 
 using grpc::Channel;
 using grpc::ClientContext;
 using grpc::Status;
-using x2dome::ReturnCode;
-using x2dome::AzEl;
-using x2dome::IsComplete;
-using x2dome::BasicString;
-using x2dome::X2Dome;
+using hx2dome::ReturnCode;
+using hx2dome::AzEl;
+using hx2dome::IsComplete;
+using hx2dome::BasicString;
+using hx2dome::HX2Dome;
 
-class X2DomeClient {
+class HX2DomeClient {
  public:
-  X2DomeClient(std::shared_ptr<Channel> channel)
-      : stub_(X2Dome::NewStub(channel)) {}
+  HX2DomeClient(std::shared_ptr<Channel> channel)
+      : stub_(HX2Dome::NewStub(channel)) {}
 
   // Assembles the client's payload, sends it and presents the response back
   // from the server.
@@ -76,7 +76,7 @@ class X2DomeClient {
   }
 
  private:
-  std::unique_ptr<X2Dome::Stub> stub_;
+  std::unique_ptr<HX2Dome::Stub> stub_;
 };
 
 int main(int argc, char** argv) {
@@ -84,16 +84,16 @@ int main(int argc, char** argv) {
   // are created. This channel models a connection to an endpoint (in this case,
   // localhost at port 50051). We indicate that the channel isn't authenticated
   // (use of InsecureChannelCredentials()).
-  X2DomeClient x2dome(grpc::CreateChannel(
+  HX2DomeClient hx2dome(grpc::CreateChannel(
       "localhost:50051", grpc::InsecureChannelCredentials()));
   int rc(1);
   double a(10);
   double e(20);
   int result;
-  result = x2dome.dapiGotoAzEl(rc, a, e);
+  result = hx2dome.dapiGotoAzEl(rc, a, e);
   // int output(dynamic_cast<char>(result.return_code()));
   std::string test("Y E E T");
-  std::cout << "X2Dome received: " << result << std::endl;
+  std::cout << "HX2Dome received: " << result << std::endl;
 
   return 0;
 }

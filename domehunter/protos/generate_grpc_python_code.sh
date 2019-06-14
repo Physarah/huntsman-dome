@@ -6,7 +6,7 @@ if [ "$1" == "clean" ]; then
 else
 	PROTOS_PATH="$HOME/Documents/REPOS/huntsman-dome/domehunter/protos/src/"
 	PROTO_PATH1="/usr/local/include/google/protobuf/"
-	PROTO_PATH2="/home/fergus/Documents/REPOS/huntsman-dome/domehunter/protos/src/x2dome.proto"
+	PROTO_PATH2="/home/fergus/Documents/REPOS/huntsman-dome/domehunter/protos/src/hx2dome.proto"
 
 	echo -e "\nGenerating GRPC Python code\n"
 

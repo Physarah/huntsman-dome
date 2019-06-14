@@ -32,38 +32,38 @@ PROTOC = protoc
 GRPC_CPP_PLUGIN = grpc_cpp_plugin
 GRPC_CPP_PLUGIN_PATH ?= `which $(GRPC_CPP_PLUGIN)`
 PROTO_PATH1 = /usr/local/include/google/protobuf/
-PROTO_PATH2 = /home/fergus/Documents/REPOS/huntsman-dome/domehunter/protos/proto_test/x2dome.proto
+PROTO_PATH2 = /home/fergus/Documents/REPOS/huntsman-dome/domehunter/protos/proto_test/hx2dome.proto
 
 # PROTOS_PATH = ../../protos
 PROTOS_PATH = /home/fergus/Documents/REPOS/huntsman-dome/domehunter/protos/proto_test/
 
 vpath %.proto $(PROTOS_PATH)
 
-# all: x2dome.proto_client x2dome.proto_server
-all: x2dome.proto_client
+# all: hx2dome.proto_client hx2dome.proto_server
+all: hx2dome.proto_client
 
-x2dome.proto_client: x2dome.pb.o x2dome.grpc.pb.o x2dome.proto_client.o
+hx2dome.proto_client: hx2dome.pb.o hx2dome.grpc.pb.o hx2dome.proto_client.o
 	$(CXX) $^ $(LDFLAGS) -o $@
 
-x2dome.grpc.pb.o: x2dome.grpc.pb.cc
+hx2dome.grpc.pb.o: hx2dome.grpc.pb.cc
 	$(CXX) $^ $(LDFLAGS) -c
 
-x2dome.pb.o: x2dome.pb.cc
+hx2dome.pb.o: hx2dome.pb.cc
 	$(CXX) $^ $(LDFLAGS) -c
 
-x2dome.proto_client.o: x2dome.proto_client.cc
+hx2dome.proto_client.o: hx2dome.proto_client.cc
 	$(CXX) $^ $(LDFLAGS) -c
 
-# x2dome.proto_server: x2dome.proto.pb.o x2dome.proto.grpc.pb.o x2dome.proto_server.o helper.o
+# hx2dome.proto_server: hx2dome.proto.pb.o hx2dome.proto.grpc.pb.o hx2dome.proto_server.o helper.o
 #	 $(CXX) $^ $(LDFLAGS) -o $@
 
 .PRECIOUS: %.grpc.pb.cc
-x2dome.grpc.pb.cc: x2dome.proto
+hx2dome.grpc.pb.cc: hx2dome.proto
 	$(PROTOC) -I $(PROTOS_PATH) --grpc_out=. --proto_path=$(PROTO_PATH1) $(PROTO_PATH2) --plugin=protoc-gen-grpc=$(GRPC_CPP_PLUGIN_PATH)
 
 .PRECIOUS: %.pb.cc
-x2dome.pb.cc: x2dome.proto
+hx2dome.pb.cc: hx2dome.proto
 	$(PROTOC) -I $(PROTOS_PATH) --cpp_out=. $<
 
 clean:
-	rm -f *.o *.pb.cc *.pb.h x2dome.proto_client x2dome.proto_server
+	rm -f *.o *.pb.cc *.pb.h #hx2dome.proto_client hx2dome.proto_server
