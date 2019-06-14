@@ -2,13 +2,14 @@
 
 if [ "$1" == "clean" ]; then
 	rm x2dome.proto_client
-	rm *.grpc.pb.* 
-	rm *.pb.* 
+	rm *.grpc.pb.*
+	rm *.pb.*
 	rm *.o
 else
-	PROTOS_PATH="/home/fergus/Documents/REPOS/huntsman-dome/domehunter/protos/proto_test/"
+	HDOME_PATH="$HOME/Documents/REPOS"
+	PROTOS_PATH="$HDOME_PATH/huntsman-dome/domehunter/protos/proto_test/"
 	PROTO_PATH1="/usr/local/include/google/protobuf/"
-	PROTO_PATH2="/home/fergus/Documents/REPOS/huntsman-dome/domehunter/protos/proto_test/hx2dome.proto"
+	PROTO_PATH2="$HDOME_PATH/huntsman-dome/domehunter/protos/proto_test/hx2dome.proto"
 	GRPC_CPP_PLUGIN_PATH="$(which grpc_cpp_plugin)"
 
 	echo -e "Generating GRPC C++ code\n"

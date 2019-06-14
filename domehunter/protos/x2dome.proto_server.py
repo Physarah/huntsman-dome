@@ -19,24 +19,24 @@ import logging
 
 import grpc
 
-import x2dome_pb2
-import x2dome_pb2_grpc
+import hx2dome_pb2
+import hx2dome_pb2_grpc
 
 _ONE_DAY_IN_SECONDS = 60 * 60 * 24
 
 
-class X2DomeServer(x2dome_pb2_grpc.X2DomeServicer):
+class HX2DomeServer(hx2dome_pb2_grpc.HX2DomeServicer):
 
     def dapiGotoAzEl(self, request, context):
         # print something for debugging, so I know python server is actually getting a request from client
         print('something')
         # increment the return code by 1 so I can see the client/server communication is working
-        return x2dome_pb2.ReturnCode(return_code=request.return_code+1)
+        return hx2dome_pb2.ReturnCode(return_code=request.return_code+1)
 
 
 def serve():
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
-    x2dome_pb2_grpc.add_X2DomeServicer_to_server(X2DomeServer(), server)
+    hx2dome_pb2_grpc.add_HX2DomeServicer_to_server(HX2DomeServer(), server)
     server.add_insecure_port('[::]:50051')
     server.start()
     try:

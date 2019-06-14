@@ -12,28 +12,6 @@
 #include "licensedinterfaces/mutexinterface.h"
 #include "licensedinterfaces/tickcountinterface.h"
 
-// AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-#include <iostream>
-#include <memory>
-#include <string>
-
-#include <grpcpp/grpcpp.h>
-
-#ifdef BAZEL_BUILD
-#include "/home/fergus/Documents/REPOS/huntsman-dome/domehunter/protos/src/x2dome.grpc.pb.h"
-#else
-#include "x2dome.grpc.pb.h"
-#endif
-
-using grpc::Channel;
-using grpc::ClientContext;
-using grpc::Status;
-using x2dome::ReturnCode;
-using x2dome::AzEl;
-using x2dome::IsComplete;
-using x2dome::BasicString;
-using x2dome::X2Dome;
-// AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 
 X2Dome::X2Dome(const char* pszSelection,
 							 const int& nISIndex,

@@ -21,19 +21,19 @@
 #include <grpcpp/grpcpp.h>
 
 #ifdef BAZEL_BUILD
-#include "/home/fergus/Documents/REPOS/huntsman-dome/domehunter/protos/x2dome.grpc.pb.h"
+#include "/home/fergus/Documents/REPOS/huntsman-dome/domehunter/protos/src/hx2dome.grpc.pb.h"
 #else
-#include "x2dome.grpc.pb.h"
+#include "hx2dome.grpc.pb.h"
 #endif
 
 using grpc::Channel;
 using grpc::ClientContext;
 using grpc::Status;
-using x2dome::ReturnCode;
-using x2dome::AzEl;
-using x2dome::IsComplete;
-using x2dome::BasicString;
-using x2dome::X2Dome;
+using hx2dome::ReturnCode;
+using hx2dome::AzEl;
+using hx2dome::IsComplete;
+using hx2dome::BasicString;
+using hx2dome::HX2Dome;
 
 // HuntsmanDome hdome(grpc::CreateChannel(
 //     "localhost:50051", grpc::InsecureChannelCredentials()));
@@ -42,7 +42,7 @@ class HuntsmanDome
 {
 public:
   HuntsmanDome(std::shared_ptr<Channel> channel)
-      : stub_(X2Dome::NewStub(channel)) {}
+      : stub_(HX2Dome::NewStub(channel)) {}
   ~HuntsmanDome();
 
   int Connect();
