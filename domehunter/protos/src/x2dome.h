@@ -1,20 +1,37 @@
+#include <stdio.h>
+#include <string.h>
+
+#include "licensedinterfaces/sberrorx.h"
+#include "licensedinterfaces/basicstringinterface.h"
+#include "licensedinterfaces/serxinterface.h"
+#include "licensedinterfaces/basiciniutilinterface.h"
+#include "licensedinterfaces/theskyxfacadefordriversinterface.h"
+#include "licensedinterfaces/sleeperinterface.h"
+#include "licensedinterfaces/loggerinterface.h"
+#include "licensedinterfaces/basiciniutilinterface.h"
+#include "licensedinterfaces/mutexinterface.h"
+#include "licensedinterfaces/tickcountinterface.h"
 #include "licensedinterfaces/domedriverinterface.h"
 
-class SerXInterface;
-class TheSkyXFacadeForDriversInterface;
-class SleeperInterface;
-class BasicIniUtilInterface;
-class LoggerInterface;
-class MutexInterface;
-class TickCountInterface;
+#include <iostream>
+#include <memory>
+//#include <string>
 
-/*!
-\brief The X2Dome example.
+// #include <grpcpp/grpcpp.h>
+// #include "hx2dome.grpc.pb.h"
+#include "huntsmandome.h"
 
-\ingroup Example
+// using grpc::Channel;
+// using grpc::ClientContext;
+// using grpc::Status;
+// using hx2dome::ReturnCode;
+// using hx2dome::AzEl;
+// using hx2dome::IsComplete;
+// using hx2dome::BasicString;
+// using hx2dome::HX2Dome;
 
-Use this example to write an X2Dome driver.
-*/
+//
+
 class X2Dome: DomeDriverInterface
 {
 public:
@@ -102,6 +119,8 @@ private:
 	int m_nPrivateISIndex;
 
 	int m_bLinked;
+
+	HuntsmanDome m_HuntsmanDome;
 
 
 };

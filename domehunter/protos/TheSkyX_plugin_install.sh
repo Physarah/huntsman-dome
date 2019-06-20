@@ -38,9 +38,9 @@ cp "./domelist HuntsmanDome.txt" "$TheSkyX_Path/Resources/Common/Miscellaneous F
 #cp "./dometimeouts.ui" "$TheSkyX_Path/Resources/Common/$PLUGINS_DIR/DomePlugIns/"
 #cp "./Astrometric.png" "$TheSkyX_Path/Resources/Common/$PLUGINS_DIR/DomePlugIns/"
 cp "./libHuntsmanDome.so" "$TheSkyX_Path/Resources/Common/$PLUGINS_DIR/DomePlugIns/"
-cp "./libHuntsmanDome.so.1" "$TheSkyX_Path/Resources/Common/$PLUGINS_DIR/DomePlugIns/"
-cp "./libHuntsmanDome.so.1.0" "$TheSkyX_Path/Resources/Common/$PLUGINS_DIR/DomePlugIns/"
-cp "./libHuntsmanDome.so.1.0.0" "$TheSkyX_Path/Resources/Common/$PLUGINS_DIR/DomePlugIns/"
+#cp "./libHuntsmanDome.so.1" "$TheSkyX_Path/Resources/Common/$PLUGINS_DIR/DomePlugIns/"
+#cp "./libHuntsmanDome.so.1.0" "$TheSkyX_Path/Resources/Common/$PLUGINS_DIR/DomePlugIns/"
+#cp "./libHuntsmanDome.so.1.0.0" "$TheSkyX_Path/Resources/Common/$PLUGINS_DIR/DomePlugIns/"
 
 app_owner=`/usr/bin/stat -c "%u" "$TheSkyX_Path" | xargs id -n -u`
 if [ ! -z "$app_owner" ]; then
@@ -51,11 +51,11 @@ if [ ! -z "$app_owner" ]; then
 	#chown $app_owner "$TheSkyX_Path/Resources/Common/$PLUGINS_DIR/DomePlugIns/dometimeouts.ui"
 	#chown $app_owner "$TheSkyX_Path/Resources/Common/$PLUGINS_DIR/DomePlugIns/Astrometric.png"
 	chown $app_owner "$TheSkyX_Path/Resources/Common/$PLUGINS_DIR/DomePlugIns/libHuntsmanDome.so"
-	chown $app_owner "$TheSkyX_Path/Resources/Common/$PLUGINS_DIR/DomePlugIns/libHuntsmanDome.so.1"
-	chown $app_owner "$TheSkyX_Path/Resources/Common/$PLUGINS_DIR/DomePlugIns/libHuntsmanDome.so.1.0"
-	chown $app_owner "$TheSkyX_Path/Resources/Common/$PLUGINS_DIR/DomePlugIns/libHuntsmanDome.so.1.0.0"
+	#chown $app_owner "$TheSkyX_Path/Resources/Common/$PLUGINS_DIR/DomePlugIns/libHuntsmanDome.so.1"
+	#chown $app_owner "$TheSkyX_Path/Resources/Common/$PLUGINS_DIR/DomePlugIns/libHuntsmanDome.so.1.0"
+	#chown $app_owner "$TheSkyX_Path/Resources/Common/$PLUGINS_DIR/DomePlugIns/libHuntsmanDome.so.1.0.0"
 fi
 chmod  755 "$TheSkyX_Path/Resources/Common/$PLUGINS_DIR/DomePlugIns/libHuntsmanDome.so"
-chmod  755 "$TheSkyX_Path/Resources/Common/$PLUGINS_DIR/DomePlugIns/libHuntsmanDome.so.1"
-chmod  755 "$TheSkyX_Path/Resources/Common/$PLUGINS_DIR/DomePlugIns/libHuntsmanDome.so.1.0"
-chmod  755 "$TheSkyX_Path/Resources/Common/$PLUGINS_DIR/DomePlugIns/libHuntsmanDome.so.1.0.0"
+#chmod  755 "$TheSkyX_Path/Resources/Common/$PLUGINS_DIR/DomePlugIns/libHuntsmanDome.so.1"
+#chmod  755 "$TheSkyX_Path/Resources/Common/$PLUGINS_DIR/DomePlugIns/libHuntsmanDome.so.1.0"
+#chmod  755 "$TheSkyX_Path/Resources/Common/$PLUGINS_DIR/DomePlugIns/libHuntsmanDome.so.1.0.0"

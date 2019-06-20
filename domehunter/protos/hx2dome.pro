@@ -7,51 +7,28 @@
 
  
 TEMPLATE = lib
- 
 TARGET = HuntsmanDome
- 
 DEPENDPATH += .
- 
 INCLUDEPATH += .
- 
-
  
 CONFIG += dll
  
-
- 
 win32:    DEFINES += SB_WIN_BUILD
- 
 macx:    DEFINES += SB_MAC_BUILD
- 
 linux-g++:  DEFINES += SB_LINUX_BUILD
  
-
- 
 # Input
- 
 HEADERS += src/main.h \
- 
            src/x2dome.h \
-
            src/huntsmandome.h \
- 
            src/hx2dome.grpc.pb.h \
- 
            src/hx2dome.pb.h \
- 
            src/licensedinterfaces/basicstringinterface.h \
- 
            src/licensedinterfaces/sberrorx.h
- 
 SOURCES += src/main.cpp \
-
            src/x2dome.cpp \
-
            src/huntsmandome.cpp \
-
            src/hx2dome.grpc.pb.cc \
-
            src/hx2dome.pb.cc
  
 
